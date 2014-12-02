@@ -22,7 +22,7 @@ class BelongsToOptions < AssocOptions
   def initialize(name, options = {})
     default = {
       foreign_key: "#{name}_id".to_sym,
-      class_name: "#{name}".capitalize,
+      class_name: name.to_s.camelcase,
       primary_key: :id
     }
 
